@@ -10,7 +10,7 @@ Game.registerMod("simple cookie click", {
       }
     }, 1000);
 
-    var autoClickBigCookie = setInterval(Game.ClickCookie, 500);
+    var autoClickBigCookie = setInterval(Game.ClickCookie, 100);
   },
   save: function () {},
   load: function (str) {},
