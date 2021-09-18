@@ -26,4 +26,3 @@ Game.registerMod("simple cookie click", {
   save: function () {},
   load: function (str) {},
 });
-SVGAnimateElements
