@@ -1,18 +1,26 @@
 Game.registerMod("simple cookie click", {
   init: function () {
     Game.Notify(`Simple Cookie Click Loaded!`, "", [16, 5]);
+    this.name = "Simple Cookie Click Mod";
+    this.version = "1.1";
+    this.GameVersion = "2.042";
+
+    this.config = this.defaultConfig();
 
     //auto clicks any golden cookie.  Can be changed to click any shimmers
     var autoClickGolden = setInterval(function () {
       for (var h in Game.shimmers) {
-        if (Game.shimmers[h].type == "golden") {
+        if (
+          Game.shimmers[h].type == "golden" ||
+          Game.shimmers[h].type == "reindeer"
+        ) {
           Game.shimmers[h].pop();
         }
       }
     }, 1000);
 
     //clicks that cookie every 100ms
-    var autoClickBigCookie = setInterval(Game.ClickCookie, 100);
+    var autoClickBigCookie = setInterval(Game.ClickCookie, this.clickInterval);
 
     //auto casts Force Hand Of Fate whenever magic is maxed out
     var autoSpellCast = setInterval(function () {
@@ -23,7 +31,24 @@ Game.registerMod("simple cookie click", {
       }
     }, 1000);
   },
-  save: function () {},
-  load: function (str) {},
+  defaultConfig: function () {
+    var data = {
+      clickInterval: 100,
+    };
+    return data;
+  },
+  save: function () {
+    return JSON.stringify(this.config);
+  },
+  load: function (str) {
+    var obj = {};
+    if (str) {
+      obj = JSON.parse(str);
+    }
+
+    this.config = {
+      ...this.defaultConfig(),
+      ...obj,
+    };
+  },
 });
-SVGAnimateElements
