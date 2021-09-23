@@ -3,7 +3,7 @@
 	"ID": "clickthosecookies",
 	"Author": "nakedLoki",
 	"Description": "Auto Click Golden Cookise",
-	"ModVersion": 2,
+	"ModVersion": 1.2,
 	"GameVersion": 2.042,
 	"Date": "09/18/2021",
 	"Dependencies": [],
