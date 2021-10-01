@@ -2,10 +2,10 @@
 	"Name": "Simple Cookie Click",
 	"ID": "clickthosecookies",
 	"Author": "nakedLoki",
-	"Description": "Auto Click Golden Cookise",
-	"ModVersion": 1.2,
+	"Description": "Simple Auto Clicker with Magic Casting and ticker clicking",
+	"ModVersion": 1.3,
 	"GameVersion": 2.042,
-	"Date": "09/18/2021",
+	"Date": "10/1/2021",
 	"Dependencies": [],
 	"Disabled": 0,
 	"AllowSteamAchievs": 1
