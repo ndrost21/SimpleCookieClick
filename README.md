@@ -16,3 +16,5 @@ Auto Clicks the big cookie every 100 ms
 Clicks the golden cookies whenever they appear.  Clicks Reindeer as well.
 
 Auto Casts "Force the Hand of Fate" whenever your magic is maxed out.
+
+Auto Clicks News ticket fortunes

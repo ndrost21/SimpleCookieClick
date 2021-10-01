@@ -2,10 +2,17 @@ Game.registerMod("simple cookie click", {
   init: function () {
     Game.Notify(`Simple Cookie Click Loaded!`, "", [16, 5]);
     this.name = "Simple Cookie Click Mod";
-    this.version = "1.1";
+    this.version = "1.3";
     this.GameVersion = "2.042";
 
     this.config = this.defaultConfig();
+
+    //auto clicks fortune tickers
+    var tapNew = setInterval(function () {
+      if (Game.TickerEffect && Game.TickerEffect.type == "fortune") {
+        Game.tickerL.click();
+      }
+    }, 3000);
 
     //auto clicks any golden cookie.  Can be changed to click any shimmers
     var autoClickGolden = setInterval(function () {
